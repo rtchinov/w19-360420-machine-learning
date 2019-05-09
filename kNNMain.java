@@ -20,7 +20,7 @@ public static void main(String... args) throws FileNotFoundException{
 	//printing args0=pathOfData
 	System.out.println(pathToData);
 	//Choose one data point 
-	DataPoint dataPoint = Data.get(3);
+	DataPoint dataPoint = Data.get(32);
 	//Print the label of this dataPoint using getLabel() method
 	System.out.println(dataPoint.getLabel());
 	//change the array to a string to allow the data to be printed
