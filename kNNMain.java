@@ -23,8 +23,9 @@ public static void main(String... args) throws FileNotFoundException{
 	DataPoint dataPoint = DataNew.get(3);
 	//Print the label of this dataPoint using getLabel() method
 	System.out.println(dataPoint.getLabel());
-	//
+	//change the array to a string to allow the data to be printed
 	String printableX = Arrays.toString(dataPoint.getX());
+	//printing the features
 	System.out.println(printableX);
 	
 	
