@@ -13,13 +13,13 @@ public static void main(String... args) throws FileNotFoundException{
 
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
-    ArrayList<DataPoint> datasetNew = new ArrayList<DataPoint>();
-    datasetNew=readDataSet( ArrayList "breastCancer.csv");
+    java.util.List<DataPoint> datasetNew = new ArrayList<DataPoint>();
+	datasetNew=DataSet.readDataSet("breastCancer.csv");
     for(int i=0;i< args.length;i++)
     {
     System.out.println(args[i]);
     }
-    System.out.println("Label:"+  );
+    System.out.println("Label:"+ "hello"  );
     
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
 
