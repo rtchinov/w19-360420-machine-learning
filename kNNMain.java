@@ -1,7 +1,6 @@
 import java.util.List;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
+	import java.io.FileNotFoundException;
+	import java.util.Arrays;
 
 
 
@@ -13,16 +12,23 @@ public static void main(String... args) throws FileNotFoundException{
 
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
-    List<DataPoint>dataSetNew = new ArrayList<DataPoint>();
-	dataSetNew =DataSet.readDataSet("breastCancer.csv");
-	System.out.println("The features of the following data point are: "); 
-	for(int i=0;i< args.length-1;i++)
-    {
-    System.out.println(args[i]);
-    }
 	
-    System.out.println("Label:" + dataSetNew<args.length>);
-    
+   //the path is given by the file inputed(args0)=assigned to pathOfData variable 
+	String pathOfData = args[0];
+	//use pathToData as a parameter in the readDataSet()
+	List<DataPoint> DataNew = DataSet.readDataSet(pathOfData); 
+	//printing args0=pathOfData
+	System.out.println(pathOfData);
+	//Choose one data point 
+	DataPoint dataPoint = DataNew.get(3);
+	//Print the label of this dataPoint using getLabel() method
+	System.out.println(dataPoint.getLabel());
+	//
+	String printableX = Arrays.toString(dataPoint.getX());
+	System.out.println(printableX);
+	
+	
+	//java kNNMain data/iris.csv  //or the file u want to go into
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
 
 
