@@ -6,7 +6,7 @@ import java.util.List;
 
 public class kNNMain{
 
-  private static String List;
+
 
 public static void main(String... args) throws FileNotFoundException{
 
@@ -14,13 +14,13 @@ public static void main(String... args) throws FileNotFoundException{
     // the desired file. Choose a given DataPoint, and print its features and label
 	
    //the path is given by the file inputed(args0)=assigned to pathOfData variable 
-	String pathOfData = args[0];
+	String pathToData = args[0];
 	//use pathToData as a parameter in the readDataSet()
-	List<DataPoint> DataNew = DataSet.readDataSet(pathOfData); 
+	List<DataPoint> Data = DataSet.readDataSet(pathToData); 
 	//printing args0=pathOfData
-	System.out.println(pathOfData);
+	System.out.println(pathToData);
 	//Choose one data point 
-	DataPoint dataPoint = DataNew.get(3);
+	DataPoint dataPoint = Data.get(3);
 	//Print the label of this dataPoint using getLabel() method
 	System.out.println(dataPoint.getLabel());
 	//change the array to a string to allow the data to be printed
