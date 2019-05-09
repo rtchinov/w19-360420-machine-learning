@@ -1,18 +1,26 @@
 import java.util.List;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
 
 public class kNNMain{
 
-  public static void main(String... args) throws FileNotFoundException{
+  private static String List;
+
+public static void main(String... args) throws FileNotFoundException{
 
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
-    //List<DataPoint> datasetNew = new ArrayList<DataPoint>();
-    //datasetNew=DataSet.readDataSet();
-    int i=0;
+    ArrayList<DataPoint> datasetNew = new ArrayList<DataPoint>();
+    datasetNew=readDataSet( ArrayList "breastCancer.csv");
+    for(int i=0;i< args.length;i++)
+    {
+    System.out.println(args[i]);
+    }
+    System.out.println("Label:"+  );
+    
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
 
 
