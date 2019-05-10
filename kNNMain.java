@@ -26,18 +26,18 @@ public static void main(String... args) throws FileNotFoundException{
 	//Print the label of this dataPoint using getLabel() method
 	System.out.println(dataPoint.getLabel());
 	//change the array to a string to allow the data to be printed
-	String printableX = Arrays.toString(dataPoint.getX());
+	String printString = Arrays.toString(dataPoint.getX());
 	//printing the features
-	System.out.println(printableX);
+	System.out.println(printString);
 	
 	/**To use in CMD */ 
 	//java kNNMain data/iris.csv  
 	
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
-	String trainingDataSet=Data.getTrainingSet(Data,fractionTrainingSet); 
-	String testingDataSet=Data.getTestSet(Data,fractionTestSet); 
+	List<DataPoint> trainingDataSet=DataSet.getTrainingSet(Data,fractionTrainingSet); 
+	List<DataPoint> testingDataSet=DataSet.getTestSet(Data,fractionTestSet); 
 	
-    // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
+    
 	
 
 
