@@ -9,7 +9,9 @@ public class kNNMain{
 
 
 public static void main(String... args) throws FileNotFoundException{
-
+	//setting the fraction of training and testing 
+	double fractionTrainingSet=0.8; 
+	double fractionTestSet=1.0-fractionTrainingSet; 
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
 	
@@ -20,7 +22,7 @@ public static void main(String... args) throws FileNotFoundException{
 	//printing args0=pathOfData
 	System.out.println(pathToData);
 	//Choose one data point 
-	DataPoint dataPoint = Data.get(32);
+	DataPoint dataPoint = Data.get(23);
 	//Print the label of this dataPoint using getLabel() method
 	System.out.println(dataPoint.getLabel());
 	//change the array to a string to allow the data to be printed
@@ -28,13 +30,15 @@ public static void main(String... args) throws FileNotFoundException{
 	//printing the features
 	System.out.println(printableX);
 	
+	/**To use in CMD */ 
+	//java kNNMain data/iris.csv  
 	
-	//java kNNMain data/iris.csv  //or the file u want to go into
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
-
-
+	String trainingDataSet=Data.getTrainingSet(Data,fractionTrainingSet); 
+	String testingDataSet=Data.getTestSet(Data,fractionTestSet); 
+	
     // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
-
+	
 
 
     // TASK 4: write a new method in DataSet.java which takes as arguments to DataPoint objects,
