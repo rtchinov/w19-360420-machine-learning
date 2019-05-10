@@ -34,8 +34,8 @@ public static void main(String... args) throws FileNotFoundException{
 	//java kNNMain data/iris.csv  
 	
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
-	String trainingDataSet=Data.getTrainingSet(Data,fractionTrainingSet); 
-	String testingDataSet=Data.getTestSet(Data,fractionTestSet); 
+	List<DataPoint> trainingDataSet=DataSet.getTrainingSet(Data,fractionTrainingSet); 
+	List<DataPoint> testingDataSet=DataSet.getTestSet(Data,fractionTestSet); 
 	
     // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
 	
