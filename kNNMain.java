@@ -52,7 +52,7 @@ public static void main(String... args) throws FileNotFoundException{
 		    // and returns the Euclidean distance between those two points (as a double)
 			for (int k=0; k<Data.size(); k++)
 			{
-			System.out.println( "Distance to point is " + DataSet.distanceEuclid(Data.get(k), dataPoint ));
+			System.out.println("Distance to point is " + DataSet.distanceEuclid(Data.get(k), dataPoint ));
 			}
 		    // TASK 5: Use the KNNClassifier class to determine the k nearest neighbors to a given DataPoint,
 		    // and make a print a predicted target label
