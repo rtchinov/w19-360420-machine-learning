@@ -65,7 +65,11 @@ public static void main(String... args) throws FileNotFoundException{
 			
 			//put results into an array
 			
-				//array=      ;
+			KNNClassifier kclass = new KNNClassifier(7);
+			DataPoint[] neigh = kclass.getNearestNeighbors(dp, num);
+			String prediction = kclass.predict(dp , num);
+			System.out.println(prediction);
+			System.out.println(Arrays.toString(neigh));
 			
 			
 			
