@@ -70,8 +70,15 @@ public static void main(String... args) throws FileNotFoundException{
 			String prediction = kclass.predict(dp , num);
 			System.out.println(prediction);
 			System.out.println(Arrays.toString(neigh));
-			
-			
+			Boolean correctness = True;
+			int CounterofTrue = 0;
+			if (prediction == DataPoint.getLabel()){
+				correctness = True;
+				CounterofTrue += 1;
+			}
+			else {
+				correctness = False;
+			}
 			
 			
 		
@@ -85,14 +92,12 @@ public static void main(String... args) throws FileNotFoundException{
 			
 			
 	System.out.println("The accuracy of the model: " + count ); 
-	System.out.println("The mean is:" + mean(array));
-	System.out.println("The standard Deviation is: " + standardDeviation(array));
-	meanArray[count]=mean(array); 
-	standardDevArray[count]=standardDeviation(array); 
+	System.out.println("The accuracy is:" + (double)(CounterofTrue/Data.size());
+	accuracyArray[count]=(double)(CounterofTrue/Data.size()); 
 	}
 	System.out.println("THE ACCURACY OF THE OVERALL MODEL: "); 
-	System.out.println("The average accuracy is:" + mean(meanArray));
-	System.out.println("The standard Deviation of accuracy is: " + standardDeviation(standardDevArray));
+	System.out.println("The average accuracy is:" + mean(accuracyArray));
+	System.out.println("The standard Deviation of accuracy is: " + standardDeviation(accuracyArray));
 
   }
 // TASK 6: loop over the datapoints in the held out test set, and make predictions for Each
