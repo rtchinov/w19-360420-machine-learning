@@ -37,10 +37,11 @@ public static void main(String... args) throws FileNotFoundException{
 	// TASK 6: loop over the datapoints in the held out test set, and make predictions for Each
     // point based on nearest neighbors in training set. Calculate accuracy of model.
 	
-	double [] meanArray = new double [1000];
-	double [] standardDevArray = new double [1000]; 
+	double [] accuracyArray = new double [1000];
+	int CounterofTrue = 0;
 	
-	for (int count=1; count<=1000; count ++)
+	 
+	for (int count=0; count<1000; count ++)
 	{
 		
 			
@@ -48,13 +49,13 @@ public static void main(String... args) throws FileNotFoundException{
 		List<DataPoint> trainingDataSet=DataSet.getTrainingSet(Data,fractionTrainingSet); 
 		List<DataPoint> testingDataSet=DataSet.getTestSet(Data,fractionTestSet); 
 			
-			
 		
+		int counterofsize = testingDataSet.size(); 
 		// TASK 4: write a new method in DataSet.java which takes as arguments to DataPoint objects,
 	    // and returns the Euclidean distance between those two points (as a double)
 			
-		double [] array= new double[Data.size()]; //for task 6
-		for (int k=0; k<Data.size(); k++)
+		//for task 6
+		for (int k=0; k<counterofsize; k++)
 		{
 				
 		// TASK 5: Use the KNNClassifier class to determine the k nearest neighbors to a given DataPoint,
@@ -64,20 +65,18 @@ public static void main(String... args) throws FileNotFoundException{
 			//prediction
 			
 			//put results into an array
-			
-			KNNClassifier kclass = new KNNClassifier(7);
-			DataPoint[] neigh = kclass.getNearestNeighbors(dp, num);
-			String prediction = kclass.predict(dp , num);
+			DataPoint point=testingDataSet.get(k); 
+			double distance=DataSet.distanceEuclid(testingDataSet.get(k),dataPoint); 
+			KNNClassifier kclass = new KNNClassifier(3);
+			DataPoint[] neigh = kclass.getNearestNeighbors(testingDataSet,point);
+			String prediction = kclass.predict(testingDataSet,point);
 			System.out.println(prediction);
 			System.out.println(Arrays.toString(neigh));
-			Boolean correctness = True;
-			int CounterofTrue = 0;
-			if (prediction == DataPoint.getLabel()){
-				correctness = True;
-				CounterofTrue += 1;
-			}
-			else {
-				correctness = False;
+			
+			
+			if (prediction.equals(point.getLabel())){
+				
+				CounterofTrue ++;
 			}
 			
 			
@@ -85,15 +84,16 @@ public static void main(String... args) throws FileNotFoundException{
 			
 				
 	
-			System.out.println("Distance to point is " + DataSet.distanceEuclid(Data.get(k), dataPoint ));
+			System.out.println("Distance to point is " + distance);
+			System.out.println("The accuracy of the model: " + (count+1)); 
+		System.out.println("The accuracy is:" + (double)(CounterofTrue/counterofsize));
+		accuracyArray[count]=(double)(CounterofTrue)/counterofsize; 
 			}
 			
 			//accuracy 
 			
 			
-	System.out.println("The accuracy of the model: " + count ); 
-	System.out.println("The accuracy is:" + (double)(CounterofTrue/Data.size());
-	accuracyArray[count]=(double)(CounterofTrue/Data.size()); 
+	
 	}
 	System.out.println("THE ACCURACY OF THE OVERALL MODEL: "); 
 	System.out.println("The average accuracy is:" + mean(accuracyArray));
