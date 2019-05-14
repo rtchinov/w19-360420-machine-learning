@@ -44,11 +44,11 @@ First, the machine must be able to find a pattern that will posit a correct pred
 Inside this algorithm, the machine looked at the distance between the target data point parameter and the values of the parameters surrounding it. Afterwards, the program classifies the nearest neighbors and determines the identity of the target data point, that is defined as the predominant identity of the other points within the maximum distance determined by the kNNClassifier class.  
 \\ \par Every time that the process is repeated, the accuracy changes. With each run, a new training and testing set is selected, therefore, the ability of the machine to categorize the tumor may vary according to the data set that is selected at random. This is dependent on the proximity of the data points and on the distribution of the data provided by the breastCancer.csv dataset.After the completion of the 1000 runs, the model must be able to provide its average accuracy to the user. To accomplish this, the average accuracy was evaluated by the provided mean and standard deviation methods.In addition, to evaluate if our model is adequate, a comparison to another basic model must be made, to prove that our model is in fact sufficiently superior to be considered effective in categorizing tumors.
 To determine the chance of picking either malignant or benign without looking at the data, the frequency of each in the complete dat set must be evaluated. Once the printLabelFrequencies method is called, the terminal outputs the following:
-\\ \\
+\\
 benign 444 dataPoints
 \\ malignant 237 dataPoints
 \\ \\
-Therefore, out of the 444+237=681 datapoints, 65.198\% are benign and 34.802\% are malignant.Thus, even without a proper model, the probability is higher to pick benign over malignant whilst categorizing. 
+Therefore, out of the 444+237=681 datapoints, 65.198\% are benign and 34.802\% are malignant.Thus, even without a proper model, the probability is higher to pick benign over malignant whilst categorizing.
 
 \\Although our model/classifier offers a pretty good prediction of ........, the model still makes erroneous predictions.These errors are evaluated in terms of Accuracy level in our model. However, in actuality, medical diagnosis often involves various other sources of error. First, the notions of false positives and false negatives are crucial. A false positive is defined as.....
 \\ A false negative is defined as......
