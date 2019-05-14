@@ -32,8 +32,9 @@ public static void main(String... args) throws FileNotFoundException{
 
 	/**To use in CMD */
 	//java kNNMain data/iris.csv
-	DataSet.printLabelFrequencies(Data); 
-
+	DataSet.printLabelFrequencies(Data);
+  System.out.print("Number of points:" + Data.size());
+	
 	// TASK 6: loop over the datapoints in the held out test set, and make predictions for Each
     // point based on nearest neighbors in training set. Calculate accuracy of model.
 
