@@ -1,6 +1,6 @@
-# Title
+# Report
 ## Course - Section
-## Authors
+## Rachel Tchinov, Andrew Salem
 
 ## Distributions of Model Accuracy
 
@@ -20,7 +20,7 @@ benign 444 dataPoints
 
 Therefore, out of the 444+237=681 data points, 65.198\% are benign and 34.802\% are malignant. Thus, even without a proper model, the probability is higher to pick benign over malignant whilst categorizing.
 
-Although our model/classifier offers a pretty good prediction of ........, the model still makes erroneous predictions. These errors are evaluated in terms of Accuracy level in our model. However, in actuality, medical diagnosis often involves various other sources of error. First, the notions of false positives and false negatives are crucial. A false positive is defined as the AI saying that someone has a malignant growth while they actually have a benign one that will not cause any damage to their system.
+Although our model/classifier offers a pretty good prediction : an average accuracy of 0.97 (standard deviation of 1.911) and an average precision of 0.95 (standard deviation of 8.41) and finally a recall of 0.96 (standard deviation of 8.42) , the model still makes erroneous predictions. These errors are evaluated in terms of Accuracy level in our model. However, in actuality, medical diagnosis often involves various other sources of error. First, the notions of false positives and false negatives are crucial. A false positive is defined as the AI saying that someone has a malignant growth while they actually have a benign one that will not cause any damage to their system.
  A false negative is defined as the AI categorizing a malignant tumor as being benign. This will have severe repercussions because the doctor will not take the proper measures to remove the cancerous cells while the tumor will adversely affect the individual's health.
 Now, in addition to accuracy, it is important to identify Recall and Precision for each iteration of the algorithm during the 1000 runs.
 Recall  is the number of true positives over the number of elements that can be considered as relevant, including the false positives. Recall must also be calculated for the negatives, which will be the fraction of the true negatives over the entire number of negatives that are predicted. In this case, the positive would be the malignant tumors and the benign are the negatives.
