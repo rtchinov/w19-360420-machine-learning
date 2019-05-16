@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 
 
-public class kNNMain{
+public class kNNMain2{
 
   public static void main(String... args) throws FileNotFoundException{
 
